@@ -1,14 +1,14 @@
-Q.tools.About = function(){
+
+// Register the command
+Q.Executor.register('about', function(){
 	
 	return {
 		
-		description: "What is this ?",
-		
-		run: function(args){
+		run: function(args){	// Execution point
 			var out = "";
 			
 			out += "Quick web shell\n";
-			out += "&nbsp;&nbsp;&nbsp;&nbsp;version 0.1\n";
+			out += "&nbsp;&nbsp;&nbsp;&nbsp;version 0.2\n";
 			out += "&nbsp;&nbsp;&nbsp;&nbsp;Copyright (c) <a href='http://www.artbits.it'>artBits snc</a> 2009\n";
 			
 			return out;
@@ -16,7 +16,4 @@ Q.tools.About = function(){
 		
 	}
 	
-}();
-
-// Register the command
-Q.Executor.register('about', Q.bin.About.run, Q.bin.About.description);
+});
