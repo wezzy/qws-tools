@@ -41,11 +41,15 @@ Q.tools._index = {
 	},
 	
 	search: {
-		description:"Search google for the specified text, seark &lt;keyword&gt; for searching, search -H for more info"
+		description: "Search google for the specified text, seark &lt;keyword&gt; for searching, search -H for more info"
 	},
 	
 	yql: {
-		description:"Yahoo Query Language client, yql &lt;query&gt; yql -H for more info"
+		description: "Yahoo Query Language client, yql &lt;query&gt; yql -H for more info"
+	},
+	
+	jsonpath: {
+		description: "Search and filter data using jsonpath http://goessner.net/articles/JsonPath/"
 	}
 	
 };
