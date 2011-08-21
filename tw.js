@@ -97,7 +97,8 @@ Q.Executor.register('tw', function(){
         out += "tw trends - display current trends\n";
 		
 		out += "-O swicth make the tool return js object instead of formatted string"
-
+		out += "\n-H show this help message";
+		
        callback(out);
     }
 
@@ -111,7 +112,7 @@ Q.Executor.register('tw', function(){
 			
 			if(args.indexOf("-O") >= 0) _returnObject = true;	// Return the object instead of string
 			
-            if(args[0] == "help") return _help(callback);
+            if(args[0] == "-H") return _help(callback);
             
 			if(args[0] == "search") return _search(callback, args);
 

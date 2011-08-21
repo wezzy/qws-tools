@@ -37,7 +37,15 @@ Q.tools._index = {
 	},
 	
 	tw:{
-		description: "Twitter client, tw help for more info"
+		description: "Twitter client, tw -H for more info"
+	},
+	
+	search: {
+		description:"Search google for the specified text, seark &lt;keyword&gt; for searching, search -H for more info"
+	},
+	
+	yql: {
+		description:"Yahoo Query Language client, yql &lt;query&gt; yql -H for more info"
 	}
 	
 };
