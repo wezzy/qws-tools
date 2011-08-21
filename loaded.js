@@ -4,8 +4,8 @@ Q.Executor.register('loaded', function(){
 	
 	return {
 		
-		run: function(args){	// Execution point
-			return Q.Executor.getLoadedList();
+		run: function(callback, args){	// Execution point
+			callback(Q.Executor.getLoadedList());
 		}
 		
 	}

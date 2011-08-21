@@ -4,19 +4,24 @@ Q.Executor.register('help', function(){
 	
 	return {
 		
-		run: function(args){
-			var out = "";
+		run: function(callback, args){
 			
-			out += Q.Executor.run('about');
 			
-			out += "\n";
-			out += "Available commands:\n";
+			Q.Executor.run('about', "", function(result){
+				var out = "";
+				out += result;
+				out += "\n";
+				out += "Available commands:\n";
+
+				var list = Q.Executor.getList();
+				for(var i = 0; i < list.length; i++){
+					out += "<b>" + list[i] + "</b> - " + Q.Executor.getDescription(list[i]) + "\n";
+				}
+				
+				callback(out);
+				
+			});
 			
-			var list = Q.Executor.getList();
-			for(var i = 0; i < list.length; i++){
-				out += "<b>" + list[i] + "</b> - " + Q.Executor.getDescription(list[i]) + "\n";
-			}
-			return out;
 		}
 		
 	}

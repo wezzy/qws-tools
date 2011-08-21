@@ -3,7 +3,7 @@ Q.Executor.register('calc', function(){
 	
 	return {
 				
-		run: function(args){
+		run: function(callback, args){
 			
 			if(args == "" || !args){
 				Q.Display.show("Usage: calc &lt;expression&gt;");
@@ -12,7 +12,9 @@ Q.Executor.register('calc', function(){
 			
             args = args.join(" ");
 			args = args.replace("x", "*");
-			return eval(args);
+			
+			var result = eval(args);
+			callback(result);
 		}
 		
 	}

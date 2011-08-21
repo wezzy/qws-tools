@@ -4,8 +4,10 @@ Q.Executor.register('load', function(){
 	
 	return {
 		
-		run: function(args){	// Execution point
-			Q.Loader.load(args);
+		run: function(callback, args){	// Execution point
+			Q.Loader.load(args, function(result){
+				callback(true);
+			});
 		}
 		
 	}

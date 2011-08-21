@@ -3,7 +3,8 @@ Q.Executor.register('echo', function(){
 	
 	return {
 		
-		run: function(args){
+		run: function(callback, args){
+			
             args = args.join(" ");
 			var words = args.split(" ");
 
@@ -17,7 +18,8 @@ Q.Executor.register('echo', function(){
 				}
 			}
 			
-			return args
+			callback(args);
+			return;
 		}
 		
 	}
