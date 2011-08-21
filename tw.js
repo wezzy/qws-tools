@@ -89,11 +89,14 @@ Q.Executor.register('tw', function(){
     }
 
     var _help = function(callback){
+	
         var out = "";
         out += "qws Twitter help\n";
         out += "tw search &lt;keyword&gt; - search twitter for the specified keyword\n";
         out += "tw help - show this help message\n";
         out += "tw trends - display current trends\n";
+		
+		out += "-O swicth make the tool return js object instead of formatted string"
 
        callback(out);
     }
