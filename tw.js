@@ -30,7 +30,7 @@ Q.Executor.register('tw', function(){
         // http://search.twitter.com/search.json?callback=foo&q=twitter
         $.getJSON("http://search.twitter.com/search.json?q=" + args[1] + "&callback=?", function(data){
             if(!_returnObject){
-			var out = "<table>";
+				var out = "<table>";
 	            for(var i = 0; i < data.results.length; i++){
 
 	                var r = data.results[i];
