@@ -6,21 +6,21 @@ Q.tools._index = {
 	},
 	
 	calc: { 
-		description: "calc <expression> to execute math calcs"
+		description: "Calc <expression> to execute math calcs"
 	},
 	
 	echo: {
-		description: "return it's input as a result, if a string is prefixed with $ echo try load the value setted with 'set'",
+		description: "Return it's input as a result, if a string is prefixed with $ echo try load the value setted with 'set'",
 		dependencies: ["set"]
 	},
 	
 	help: {
-		description: "shows this help",
+		description: "Shows this help",
 		dependencies: ["about"]
 	},
 	
 	set: {
-		description: "store a value in qws memory &lt;identifier&gt;=&lt;value&gt;. This returns the saved value",
+		description: "Store a value in qws memory &lt;identifier&gt;=&lt;value&gt;. This returns the saved value",
 		dependencies: ["echo"]
 	},
 	
@@ -30,6 +30,14 @@ Q.tools._index = {
 	
 	loaded: {
 		description: "Return the list of loaded tools"
+	}, 
+	
+	define: {
+		description: "Parse the code and return and object, useful with pipes.\n For example 'define {a:1}' returns a new object with an attribute 'a' with value 1"
+	},
+	
+	tw:{
+		description: "Twitter client, tw help for more info"
 	}
 	
 };
